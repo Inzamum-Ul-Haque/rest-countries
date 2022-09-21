@@ -13,7 +13,7 @@ const Countries = () => {
 
   return (
     <div>
-      <h2>Countries in other file</h2>
+      <h2>All the Rest Countries</h2>
       <div className="countries-container">
         {countries.map((country) => (
           <Country
