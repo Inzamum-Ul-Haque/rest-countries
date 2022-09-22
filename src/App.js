@@ -1,10 +1,12 @@
 import "./App.css";
 import Countries from "./components/Countries/Countries";
+import District from "./components/District/District";
 
 function App() {
   return (
     <div className="App">
-      <Countries />
+      {/* <Countries /> */}
+      <District name="Kushtia" speciality="Kulfi" />
     </div>
   );
 }
