@@ -1,7 +1,7 @@
 import "./App.css";
 import Cosmetics from "./components/Cosmetics/Cosmetics";
-import Countries from "./components/Countries/Countries";
-import District from "./components/District/District";
+// import Countries from "./components/Countries/Countries";
+// import District from "./components/District/District";
 
 function App() {
   return (

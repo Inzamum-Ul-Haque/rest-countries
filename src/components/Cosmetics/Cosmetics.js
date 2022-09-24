@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { addtoDb, removeFromDb } from "../utilities/localStorage";
 
 const Cosmetics = () => {
   const [cosmetics, setCosmetics] = useState([]);
@@ -8,6 +9,14 @@ const Cosmetics = () => {
       .then((res) => res.json())
       .then((data) => setCosmetics(data));
   }, []);
+
+  const addToCart = (id, e) => {
+    addtoDb(id);
+  };
+
+  const removeFromCart = (id) => {
+    removeFromDb(id);
+  };
 
   return (
     <div>
@@ -21,6 +30,12 @@ const Cosmetics = () => {
             <p>
               <small>Id: {cosmetic.id}</small>
             </p>
+            <button onClick={(e) => addToCart(cosmetic.id, e)}>
+              Add to Cart
+            </button>
+            <button onClick={() => removeFromCart(cosmetic.id)}>
+              Remove from Cart
+            </button>
           </div>
         );
       })}
