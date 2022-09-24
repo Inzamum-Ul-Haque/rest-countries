@@ -1,4 +1,5 @@
 import "./App.css";
+import Cosmetics from "./components/Cosmetics/Cosmetics";
 import Countries from "./components/Countries/Countries";
 import District from "./components/District/District";
 
@@ -6,7 +7,8 @@ function App() {
   return (
     <div className="App">
       {/* <Countries /> */}
-      <District name="Kushtia" speciality="Kulfi" />
+      {/* <District name="Kushtia" speciality="Kulfi" /> */}
+      <Cosmetics />
     </div>
   );
 }

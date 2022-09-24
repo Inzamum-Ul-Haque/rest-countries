@@ -3,6 +3,7 @@ import React, { useState } from "react";
 const District = (props) => {
   const [power, setPower] = useState(100);
   const [powerMsg, setPowerMsg] = useState("");
+  const [value, setValue] = useState(0);
 
   const decreasePower = (a) => {
     console.log(a.type);
@@ -17,6 +18,14 @@ const District = (props) => {
       }, 5000);
     }
   };
+
+  const increaseValue = () => {
+    const newValue = value + 1;
+    setValue(newValue);
+  };
+
+  setInterval(increaseValue, 1000);
+
   return (
     <div>
       <h2>Name: {props.name}</h2>
@@ -29,6 +38,9 @@ const District = (props) => {
       </button>
       <p>
         <strong>{powerMsg}</strong>
+      </p>
+      <p>
+        <strong>Value: {value}</strong>
       </p>
     </div>
   );
